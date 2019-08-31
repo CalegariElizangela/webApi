@@ -6,11 +6,11 @@ using Seguradora.API.Domain.Services;
 
 namespace Seguradora.API.Services
 {
-    public class CoberturaService : ICoberturaService
+    public class CotacaoService : ICotacaoService
     {
         private readonly ICoberturaRepository _repository;
 
-        public CoberturaService(ICoberturaRepository repository)
+        public CotacaoService(ICoberturaRepository repository)
         {
             _repository = repository;
         }

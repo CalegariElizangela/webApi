@@ -38,7 +38,7 @@ namespace Seguradora.API
             });
             
             services.AddScoped<ICoberturaRepository, CoberturaRepository>();
-            services.AddScoped<ICoberturaService, CoberturaService>();
+            services.AddScoped<ICotacaoService, CotacaoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

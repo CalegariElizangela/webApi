@@ -3,7 +3,6 @@ C:\Projetos\src\Seguradora.API\bin\Debug\netcoreapp2.2\Seguradora.API.runtimecon
 C:\Projetos\src\Seguradora.API\bin\Debug\netcoreapp2.2\Seguradora.API.runtimeconfig.dev.json
 C:\Projetos\src\Seguradora.API\bin\Debug\netcoreapp2.2\Seguradora.API.dll
 C:\Projetos\src\Seguradora.API\bin\Debug\netcoreapp2.2\Seguradora.API.pdb
-C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.csprojAssemblyReference.cache
 C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.csproj.CoreCompileInputs.cache
 C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.RazorAssemblyInfo.cache
 C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.RazorAssemblyInfo.cs
@@ -12,3 +11,4 @@ C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.AssemblyIn
 C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.RazorTargetAssemblyInfo.cache
 C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.dll
 C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.pdb
+C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.csprojAssemblyReference.cache

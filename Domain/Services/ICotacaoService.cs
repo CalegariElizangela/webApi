@@ -4,7 +4,7 @@ using Seguradora.API.Domain.Models;
 
 namespace Seguradora.API.Domain.Services
 {
-    public interface ICoberturaService
+    public interface ICotacaoService
     {
         Task<IEnumerable<Cobertura>> ObterCoberturasAsync();
     }
