@@ -17,7 +17,7 @@ namespace Seguradora.API.Services
     {
         private readonly ICoberturaRepository _repository;
         private readonly AppSettings _settings;
-        static HttpClient client = new HttpClient();
+        static readonly HttpClient client = new HttpClient();
 
         public CotacaoService(ICoberturaRepository repository, IOptions<AppSettings> settings)
         {
@@ -36,7 +36,7 @@ namespace Seguradora.API.Services
 
             await ValidarRequest(request, idade);
 
-            decimal valorTotalCoberturas = SomarCoberturas(request, idade);
+            decimal valorTotalCoberturas = SomarCoberturas(request);
             decimal valorPremio = CalcularDesconto(idade, valorTotalCoberturas);
             var parcelas = ObterParcelamento(valorPremio);
 
@@ -76,7 +76,7 @@ namespace Seguradora.API.Services
                 return 4;
         }
 
-        private decimal SomarCoberturas(CotacaoRequestDto request, int idade)
+        private decimal SomarCoberturas(CotacaoRequestDto request)
         {
             decimal valorTotalCoberturas = 0;
 

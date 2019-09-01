@@ -18,9 +18,9 @@ namespace Seguradora.API.Controllers
     {
         private readonly ICotacaoService _service;
 
-        public CotacaoController(ICotacaoService service)
+        public ActionResult Index()
         {
-            _service = service;
+            return View("Index");
         }
 
         [HttpGet]
@@ -35,14 +35,6 @@ namespace Seguradora.API.Controllers
         {
             try
             {
-                //request = new CotacaoRequestDto
-                //{
-                //    Nome = "Elizangela",
-                //    Nascimento = new DateTime(1988, 01, 25),
-                //    Endereco = new Endereco { Cep = "13469111", Bairro = "Vila A", Cidade = "São Paulo", Logradouro = "Rua das Flores" },
-                //    Coberturas = new string[3] { "4", "6", "7" }
-                //};
-
                 var response = await _service.CalcularCotacao(request);
 
                 return new JsonResult(response)

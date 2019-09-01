@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seguradora.API", "Seguradora.API.csproj", "{F832A521-E65F-4E4D-BA22-C1482F87551C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguradora.API.Tests", "..\Seguradora.API.Tests\Seguradora.API.Tests.csproj", "{729EC197-B425-4D2F-B74E-BFA49DFBAB87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seguradora.API.Tests", "..\Seguradora.API.Tests\Seguradora.API.Tests.csproj", "{729EC197-B425-4D2F-B74E-BFA49DFBAB87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

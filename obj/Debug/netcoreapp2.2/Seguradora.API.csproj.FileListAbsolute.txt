@@ -12,3 +12,12 @@ C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.AssemblyIn
 C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.RazorTargetAssemblyInfo.cache
 C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.dll
 C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.pdb
+C:\Projetos\src\Seguradora.API\bin\Debug\netcoreapp2.2\Seguradora.API.Views.dll
+C:\Projetos\src\Seguradora.API\bin\Debug\netcoreapp2.2\Seguradora.API.Views.pdb
+C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.TagHelpers.input.cache
+C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.TagHelpers.output.cache
+C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.RazorCoreGenerate.cache
+C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.RazorTargetAssemblyInfo.cs
+C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.Views.pdb
+C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Seguradora.API.csproj.CopyComplete
+C:\Projetos\src\Seguradora.API\obj\Debug\netcoreapp2.2\Razor\View\CotacaoView.g.cshtml.cs
