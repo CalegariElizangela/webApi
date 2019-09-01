@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "f00ee369-3970-4469-8ea0-1946303ca697",
+		"name": "Seguradora",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Seguradora.TesteOK",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"José da Silva\",\n    \"nascimento\": \"01/01/2001\",\n    \"endereco\": {\n        \"logradouro\": \"Rua das Flores, 15\",\n        \"bairro\": \"Jardim Floresta\",\n        \"cep\": \"14500-000\",\n        \"cidade\": \"São Paulo\"\n    },\n    \"coberturas\": [\n        \"01\",\n        \"03\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44350/api/cotacao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44350",
+					"path": [
+						"api",
+						"cotacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seguradora.TesteCidadeNaoAtendida",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"José da Silva\",\n    \"nascimento\": \"01/01/2001\",\n    \"endereco\": {\n        \"logradouro\": \"Rua das Flores, 15\",\n        \"bairro\": \"Jardim Floresta\",\n        \"cep\": \"14500-000\",\n        \"cidade\": \"Americana\"\n    },\n    \"coberturas\": [\n        \"01\",\n        \"03\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44350/api/cotacao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44350",
+					"path": [
+						"api",
+						"cotacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seguradora.TesteMenorDe18Anos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"José da Silva\",\n    \"nascimento\": \"01/01/2008\",\n    \"endereco\": {\n        \"logradouro\": \"Rua das Flores, 15\",\n        \"bairro\": \"Jardim Floresta\",\n        \"cep\": \"14500-000\",\n        \"cidade\": \"São Paulo\"\n    },\n    \"coberturas\": [\n        \"01\",\n        \"03\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44350/api/cotacao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44350",
+					"path": [
+						"api",
+						"cotacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seguradora.TesteCepInvalido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"José da Silva\",\n    \"nascimento\": \"01/01/2001\",\n    \"endereco\": {\n        \"logradouro\": \"Rua das Flores, 15\",\n        \"bairro\": \"Jardim Floresta\",\n        \"cep\": \"14500000\",\n        \"cidade\": \"São Paulo\"\n    },\n    \"coberturas\": [\n        \"01\",\n        \"03\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44350/api/cotacao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44350",
+					"path": [
+						"api",
+						"cotacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seguradora.TesteMaisQue4Coberturas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"José da Silva\",\n    \"nascimento\": \"01/01/2001\",\n    \"endereco\": {\n        \"logradouro\": \"Rua das Flores, 15\",\n        \"bairro\": \"Jardim Floresta\",\n        \"cep\": \"14500-000\",\n        \"cidade\": \"São Paulo\"\n    },\n    \"coberturas\": [\n        \"01\",\n        \"03\",\n        \"04\",\n        \"07\",\n        \"06\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44350/api/cotacao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44350",
+					"path": [
+						"api",
+						"cotacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seguradora.TesteSemCobertura",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"José da Silva\",\n    \"nascimento\": \"01/01/2001\",\n    \"endereco\": {\n        \"logradouro\": \"Rua das Flores, 15\",\n        \"bairro\": \"Jardim Floresta\",\n        \"cep\": \"14500-000\",\n        \"cidade\": \"São Paulo\"\n    },\n    \"coberturas\": []\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44350/api/cotacao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44350",
+					"path": [
+						"api",
+						"cotacao"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
