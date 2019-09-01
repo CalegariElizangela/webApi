@@ -6,7 +6,8 @@ namespace Seguradora.API.Controllers.DTO
     {
         public string Nome { get; set; }
         public DateTime Nascimento { get; set; }
-        public Endereco Enderecos { get; set; }
+        public int Idade { get; set; }
+        public Endereco Endereco { get; set; }
         public string[] Coberturas { get; set; }
     }
 

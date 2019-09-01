@@ -24,10 +24,11 @@ namespace Seguradora.API.Controllers
         }
 
         [HttpPost]
-        public async Task<JsonResult> ObterCoberturas([FromBody] CotacaoRequestDto request)
+        public async Task<JsonResult> Cotacao([FromBody] CotacaoRequestDto request)
         {
-            var coberturas = request;
-            return new JsonResult(coberturas);
+            var response = _service.CalcularCotacao(request);
+
+            return new JsonResult(response);
         }
     }
 }
