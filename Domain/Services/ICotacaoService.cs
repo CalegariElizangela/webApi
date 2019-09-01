@@ -8,6 +8,6 @@ namespace Seguradora.API.Domain.Services
     public interface ICotacaoService
     {
         Task<IEnumerable<Cobertura>> ObterCoberturasAsync();
-        CotacaoResponseDto CalcularCotacao(CotacaoRequestDto request);
+        Task<CotacaoResponseDto> CalcularCotacao(CotacaoRequestDto request);
     }
 }

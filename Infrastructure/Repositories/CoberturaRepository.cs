@@ -13,9 +13,15 @@ namespace Seguradora.API.Persistence.Repositories
     {
         public CoberturaRepository(AppDbContext context) : base(context)
         { }
+
         public async Task<IEnumerable<Cobertura>> ObterCoberturasAsync()
         {
             return await _context.Coberturas.ToListAsync();
+        }
+
+        public async Task<Cobertura> ObterCoberturaAsync(int idCobertura)
+        {
+            return await _context.Coberturas.FindAsync(idCobertura);
         }
     }
 }

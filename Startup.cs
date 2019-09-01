@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using Seguradora.API.Domain.Models;
 using Seguradora.API.Domain.Repositories;
 using Seguradora.API.Domain.Services;
+using Seguradora.API.Infrastructure.Configuracao;
 using Seguradora.API.Infrastructure.Contexts;
 using Seguradora.API.Persistence.Repositories;
 using Seguradora.API.Services;
@@ -21,12 +16,21 @@ namespace Seguradora.API
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
         public IConfiguration Configuration { get; }
+        readonly IHostingEnvironment HostingEnvironment;
+
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
+        {
+            HostingEnvironment = env;
+
+            var builder = new ConfigurationBuilder().SetBasePath(env.ContentRootPath)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: false, reloadOnChange: false)
+                .AddEnvironmentVariables();
+
+            Configuration = builder.Build();
+
+            AppSettingsManager.ConfigureSettings(Configuration);
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -39,6 +43,8 @@ namespace Seguradora.API
             
             services.AddScoped<ICoberturaRepository, CoberturaRepository>();
             services.AddScoped<ICotacaoService, CotacaoService>();
+
+            services.Configure<AppSettings>(Configuration.GetSection("Services"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
