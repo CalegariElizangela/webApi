@@ -32,7 +32,7 @@ namespace Seguradora.API.Services
 
         public async Task<CotacaoResponseDto> CalcularCotacao(CotacaoRequestDto request)
         {
-            var idade = CalcularIdade(request.Nascimento);
+            var idade = CalcularIdade(DateTime.Parse(request.Nascimento));
 
             await ValidarRequest(request, idade);
 

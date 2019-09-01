@@ -9,7 +9,7 @@ namespace Seguradora.API.Controllers.DTO
         public string Nome { get; set; }
 
         [JsonProperty("nascimento")]
-        public DateTime Nascimento { get; set; }
+        public string Nascimento { get; set; }
 
         [JsonProperty("endereco")]
         public Endereco Endereco { get; set; }
