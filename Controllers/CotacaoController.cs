@@ -18,11 +18,6 @@ namespace Seguradora.API.Controllers
     {
         private readonly ICotacaoService _service;
 
-        public ActionResult Index()
-        {
-            return View("Index");
-        }
-
         [HttpGet]
         public async Task<IEnumerable<Cobertura>> ObterCoberturas()
         {
